@@ -1,1 +1,7 @@
-
+# from your project folder
+git init
+git remote add origin https://github.com/rocksolidtv/Rock-Solid-TV-web.git
+git checkout -b main
+git add .
+git commit -m "Deploy site bundle"
+git push -u origin main
