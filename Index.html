@@ -2,169 +2,349 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rock Solid TV</title>
-  <meta name="description" content="Rock Solid TV — Uncensored History. Unfiltered Truth. Unshakable Faith. KJV Bible, hidden history, and Red Pills." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:," />
+  <title>Rock Solid TV — Vault</title>
+  <meta name="description" content="Rock Solid TV Vault — free downloads: PDFs, study guides, and resources." />
+  <meta name="theme-color" content="#0b0b0c" />
   <style>
-    :root{
-      --bg:#0a0a0a; --panel:#101010; --ink:#ececec; --muted:#a0a0a0; --accent:#e10600; --edge:#1c1c1c; --max:1100px;
+    :root {
+      --bg: #0b0b0c;
+      --panel: #141416;
+      --panel-2: #1b1b1e;
+      --text: #e7e7e7;
+      --muted: #a9a9b0;
+      --brand: #d8182a; /* Rock Solid red */
+      --accent: #ffd166; /* warm accent for highlights */
+      --ok: #19c37d;
+      --warn: #f4b400;
+      --err: #ff4d4f;
     }
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:overlay;background:
-      radial-gradient(1200px 600px at 50% -10%, rgba(225,6,0,.18), transparent 60%),
-      radial-gradient(900px 500px at 110% 10%, rgba(225,6,0,.08), transparent 60%),
-      repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 2px, transparent 2px 4px),
-      url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\" opacity=\"0.03\"/></svg>');background-size:auto,auto,auto,300px 300px}a{color:#9cd1ff}
-header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#000,rgba(0,0,0,.78));border-bottom:1px solid var(--edge);backdrop-filter:saturate(1.2) blur(6px)}
-.nav{max-width:var(--max);margin:auto;display:flex;align-items:center;gap:1rem;padding:12px 16px}
-.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-.logo{width:48px;height:48px;border:2px solid var(--accent);border-radius:10px;display:grid;place-items:center;font:800 14px 'Special Elite', system-ui;color:var(--accent)}
-.title{font:800 1.2rem 'Special Elite', system-ui}
-.tag{color:var(--muted);font-size:.85rem}
-.links{margin-left:auto;display:flex;flex-wrap:wrap;gap:.5rem}
-.links a{color:var(--ink);text-decoration:none;padding:.4rem .7rem;border:1px solid var(--edge);border-radius:999px}
-.links a:hover{background:#151515;border-color:#2a2a2a}
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(216,24,42,0.12), transparent 60%),
+                  radial-gradient(900px 500px at 100% 0%, rgba(216,24,42,0.08), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+    }
+    header {
+      border-bottom: 1px solid #252528;
+      background: linear-gradient(180deg, rgba(216,24,42,0.07), rgba(216,24,42,0.0));
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: blur(8px);
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 18px 18px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo {
+      width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, #2a2a2e, #141416);
+      display:grid; place-items:center; border:1px solid #2b2b30; box-shadow: 0 4px 16px rgba(0,0,0,0.4) inset;
+    }
+    .logo svg { width: 22px; height: 22px; }
+    h1 { font-size: 22px; margin: 0; letter-spacing: 0.4px; }
+    .tag { color: var(--muted); font-size: 13px; }nav { margin-left:auto; display:flex; gap:12px; }
+nav a { color: var(--text); text-decoration:none; font-size: 14px; padding:8px 10px; border-radius:8px; border:1px solid #2c2c31; background: #151518; }
+nav a:hover { background:#1b1b1e; }
 
-.hero{display:grid;place-items:center;text-align:center;padding:78px 16px;background:
-  radial-gradient(1000px 500px at 50% -10%, rgba(225,6,0,.18), transparent 60%),
-  linear-gradient(180deg, rgba(225,6,0,.08), transparent 60%)}
-.hero h1{font:700 clamp(2rem, 6vw, 3.8rem) 'Special Elite', system-ui;margin:.2rem 0;color:var(--ink)}
-.hero p{max-width:880px;margin:0 auto 1rem;color:#dcdcdc}
-.strap{color:var(--accent);font:800 0.9rem 'Special Elite', system-ui;text-transform:uppercase;letter-spacing:1px}
-.cta{display:inline-block;margin-top:.8rem;padding:.75rem 1.05rem;border:1px solid var(--accent);color:var(--ink);text-decoration:none;border-radius:10px;box-shadow:0 0 0 4px rgba(225,6,0,.12) inset}
-.cta:hover{background:#170000}
+/* Controls */
+.controls {
+  margin-top: 14px; display: grid; grid-template-columns: 1fr; gap: 12px;
+}
+@media (min-width: 840px){
+  .controls { grid-template-columns: 1fr 180px 160px 120px; }
+}
+input[type="text"], select, button {
+  background: var(--panel); color: var(--text); border:1px solid #2c2c31; border-radius: 10px;
+  padding: 12px 12px; font-size: 14px; outline: none;
+}
+input[type="text"]::placeholder { color: #7a7a82; }
+button { cursor: pointer; transition: transform .05s ease, background .2s; }
+button:hover { background: var(--panel-2); }
+button:active { transform: translateY(1px); }
+.btn-primary { border-color: #4a0d12; background: linear-gradient(180deg, #2a0a0d, #1b0a0c); }
 
-section{max-width:var(--max);margin:0 auto;padding:48px 16px}
-h2{display:flex;align-items:center;gap:.6rem;font:700 1.35rem 'Special Elite', system-ui;text-transform:uppercase;letter-spacing:.8px}
-h2 .bar{height:10px;width:10px;background:var(--accent);display:inline-block;border-radius:2px;box-shadow:0 0 0 4px rgba(225,6,0,.15)}
-.card{background:var(--panel);border:1px solid var(--edge);border-radius:14px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+/* Notice */
+.notice { background: #111114; border: 1px dashed #2b2b31; border-radius: 14px; padding: 14px 16px; color: var(--muted); margin-top: 10px; }
+.notice strong { color: var(--text); }
 
-.about p{margin:.7rem 0}
-.about strong{color:#fff}
+main { padding: 18px; }
+.section-title { display:flex; align-items:center; gap:10px; margin: 18px 0 10px; }
+.section-title h2 { margin: 0; font-size: 18px; letter-spacing: 0.3px; }
+.section-title .count { color: var(--muted); font-size: 13px; }
 
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.vid{aspect-ratio:16/9;border:1px solid #202020;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 8px 20px rgba(0,0,0,.35)}
-.vid iframe{width:100%;height:100%;border:0}
+/* Grid */
+.grid { display: grid; gap: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); }
+@media (min-width: 580px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-.verse blockquote{margin:0;padding:1rem 1.2rem;border-left:4px solid var(--accent);background:#0f0f0f;border-radius:8px;font-family:'Special Elite', system-ui}
-.verse cite{display:block;margin-top:.5rem;color:var(--muted);font-style:normal}
+.card {
+  background: linear-gradient(180deg, #161617, #121214);
+  border: 1px solid #27272c; border-radius: 14px; padding: 14px; display:flex; gap: 12px; align-items: flex-start;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+.fileicon { width: 40px; height: 48px; flex: 0 0 auto; display:grid; place-items:center; border-radius: 8px; border:1px solid #303036; background:#17171a; }
+.fileicon.small { width: 34px; height: 40px; }
+.meta { flex: 1 1 auto; min-width: 0; }
+.meta h3 { margin: 0 0 4px; font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.meta .sub { color: var(--muted); font-size: 12px; display:flex; gap:8px; flex-wrap:wrap; }
+.actions { display:flex; gap: 8px; }
 
-.vault ul{list-style:none;padding:0;margin:0}
-.vault li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1rem;border:1px solid var(--edge);border-radius:10px;margin:.6rem 0;background:#0f0f0f}
-.vault .name{font-weight:600}
+.chip { display:inline-flex; align-items:center; gap:6px; color:#ddd; background:#18181b; border:1px solid #2d2d33; border-radius: 999px; padding: 6px 10px; font-size: 12px; }
 
-.guest iframe{width:100%;height:560px;border:0;border-radius:12px}
+.empty { padding: 18px; border: 1px dashed #303036; background:#111114; color: var(--muted); border-radius: 12px; }
 
-footer{border-top:1px solid var(--edge);background:#000;color:#9a9a9a}
-.foot{max-width:var(--max);margin:0 auto;padding:18px 16px;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between;align-items:center}
+footer { margin-top: 24px; padding: 18px; color:#8a8a92; font-size: 12px; border-top: 1px solid #252528; }
+a, a:visited { color: #f66; }
+.link { text-decoration: none; color: var(--text); }
+.pill { background: #1a1a1d; border:1px solid #302428; border-radius: 999px; padding: 6px 10px; font-size: 12px; color: #f3b1b7; }
+
+.kbd { border:1px solid #333; background:#18181b; border-bottom-width:2px; padding:1px 6px; border-radius:6px; font-size: 12px; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
   </style>
 </head>
 <body>
   <header>
-    <div class="nav">
-      <a class="brand" href="#top" aria-label="Rock Solid TV">
-        <div class="logo">RSTV</div>
-        <div>
-          <div class="title">Rock Solid TV</div>
-          <div class="tag">Uncensored History · Unfiltered Truth · Unshakable Faith</div>
+    <div class="wrap" style="display:flex; align-items:center; gap:14px;">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12h18"/>
+            <path d="M7 4h10l4 8-4 8H7L3 12z"/>
+          </svg>
         </div>
-      </a>
-      <nav class="links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#episodes">Episodes</a>
-        <a href="#verse">Verse</a>
+        <div>
+          <h1>Rock Solid TV <span class="tag">— Vault</span></h1>
+          <div class="tag">Uncensored History. Unfiltered Truth. Unshakable Faith.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="https://youtube.com/@rock-solid-tv" target="_blank" rel="noopener">Episodes →</a>
         <a href="#vault">Vault</a>
-        <a href="#guestbook">Guestbook</a>
-        <a href="#contact">Contact</a>
       </nav>
     </div>
-  </header>  <section class="hero" id="top">
-    <div>
-      <div class="strap">Truth without a safety filter</div>
-      <h1>Rock Solid TV</h1>
-      <p>History they hid. Bible they won’t preach. Patterns they pray you never notice — all straight from the KJV and laid bare in plain language.</p>
-      <a class="cta" href="#episodes">Watch Episodes</a>
-    </div>
-  </section>  <section id="about" class="about">
-    <h2><span class="bar"></span> About</h2>
-    <div class="card">
-      <p><strong>Rocky Smith</strong> is the creator of <strong>Rock Solid TV</strong> — the place where the truth gets set free and the lies get dragged into the light. This isn’t polished, politically correct preaching. This is <strong>uncensored, uncut, unfiltered truth</strong> — straight from the King James Bible, backed by the history they’ve tried to erase.</p>
-      <p>Here, we pull no punches. We dig into the verses the modern church won’t touch, the prophecies they water down, and the uncomfortable realities that send false teachers running for cover. If it’s in God’s Word, we’ll say it — raw, real, and plain.</p>
-      <p>But we don’t stop there. We hand out <strong>Red Pills</strong> by the handful — exposing the hidden agendas of governments, media, and so‑called “experts,” revealing the elite’s playbook, and connecting the dots they hoped you’d never see. We uncover the cover‑ups, decode the symbolism, and track the patterns through history so you can see exactly how today’s events are lining up with prophecy.</p>
-      <p><strong>Rock Solid TV</strong> is more than a channel — it’s a wake‑up call, a battlefield briefing, and a lighthouse in the fog. If you’re ready to challenge the official story, question the narrative, and take your faith beyond the shallow waters, you’re in the right place.</p>
-    </div>
-  </section>  <section id="episodes">
-    <h2><span class="bar"></span> Episodes</h2>
-    <div class="grid" aria-live="polite">
-      <div class="vid"><iframe src="https://www.youtube.com/embed/U7ujtVsMPUY" title="RSTV Episode 1"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/HnguUVDTTgI" title="RSTV Episode 2"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/yyCn3Qo0UE0" title="RSTV Episode 3"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/Iv2ttt_R8JY" title="RSTV Episode 4"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/_7UtbBbB4o0" title="RSTV Episode 5"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/G_9j3sGzW5s" title="RSTV Episode 6"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/L5gMyzPQDvc" title="RSTV Episode 7"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/CBRw6pzoshY" title="RSTV Episode 8"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/2QWwV6JHLR8" title="RSTV Episode 9"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/gQ5_-GrOBWo" title="RSTV Episode 10"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/DCj-uzmYYM8" title="RSTV Episode 11"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/LAVeIDHTfYU" title="RSTV Episode 12"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/4GgUOJF18bQ" title="RSTV Episode 13"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/jB1iJtvUfVk" title="RSTV Episode 14"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/HBBrjJ8zzSU" title="RSTV Episode 15"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/9Zt4uYFVOwM" title="RSTV Episode 16"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/ejrvSQIa1ko" title="RSTV Episode 17"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/zb3FoxpIkrg" title="RSTV Episode 18"></iframe></div>
-    </div>
-  </section>  <section id="verse" class="verse">
-    <h2><span class="bar"></span> Bible Verse of the Day</h2>
-    <div class="card">
-      <blockquote id="vtext">“And ye shall know the truth, and the truth shall make you free.”</blockquote>
-      <cite id="vref">John 8:32 (KJV)</cite>
-    </div>
-  </section>  <section id="vault" class="vault">
-    <h2><span class="bar"></span> The Vault — Free Downloads</h2>
-    <div class="card">
-      <ul id="vault-list">
-        <li><span class="name">Sample PDF</span><a href="files/sample.pdf" download>Download</a></li>
-      </ul>
-      <p style="color:var(--muted);margin-top:.6rem">To add files: create a <code>/files</code> folder in your repo and upload PDFs. Links above will start working instantly.</p>
-    </div>
-  </section>  <section id="guestbook" class="guest">
-    <h2><span class="bar"></span> Guestbook</h2>
-    <div class="card">
-      <!-- Replace the src with your Google Form's 'Public embed' URL -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_placeholder/viewform?embedded=true">Loading…</iframe>
-      <p style="color:var(--muted);margin-top:.6rem">No backend needed — the embedded Google Form records entries. You can swap this later for a different service.</p>
-    </div>
-  </section>  <section id="contact">
-    <h2><span class="bar"></span> Contact</h2>
-    <div class="card">
-      <p>Email: <a href="mailto:rocksolidtv@outlook.com">rocksolidtv@outlook.com</a></p>
-      <p>YouTube: <a href="https://youtube.com/@rock-solid-tv" target="_blank" rel="noopener">@rock-solid-tv</a></p>
-    </div>
-  </section>  <footer>
-    <div class="foot">
-      <div>© <span id="year"></span> Rock Solid TV</div>
-      <div style="color:var(--muted)">Truth over trend.</div>
-    </div>
-  </footer>  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  </header>  <main class="wrap" id="vault">
+    <!-- QUICK HOW-TO (safe to delete) -->
+    <div class="notice" role="note">
+      <strong>How to use the Vault (Static Links Mode)</strong><br/>
+      1) In your repo, create a folder named <span class="pill">/vault</span> and upload your PDFs (e.g., <code>pharmakeia.pdf</code>).<br/>
+      2) In this HTML, duplicate a <code>&lt;li class="file" ...&gt;</code> card below and change the <code>href</code>, title, date, size, and tags. That’s it. No server required. <span class="kbd">Ctrl</span>+<span class="kbd">F</span> → “SAMPLE FILES”.
+    </div><!-- Controls -->
+<div class="controls" role="group" aria-label="Vault controls">
+  <input id="search" type="text" placeholder="Search files (title or tags)…" />
+  <select id="typeFilter" aria-label="Filter by type">
+    <option value="all">All types</option>
+    <option value="pdf">PDF</option>
+    <option value="zip">ZIP</option>
+    <option value="video">Video</option>
+    <option value="image">Image</option>
+    <option value="other">Other</option>
+  </select>
+  <select id="sortBy" aria-label="Sort">
+    <option value="alpha">Sort: A → Z</option>
+    <option value="newest">Sort: Newest</option>
+    <option value="oldest">Sort: Oldest</option>
+  </select>
+  <button id="clearBtn" class="btn-primary" type="button" title="Clear search & filters">Clear</button>
+</div>
 
-    // Simple rotating KJV verse (client-side)
-    const verses = [
-      {t:"And ye shall know the truth, and the truth shall make you free.", r:"John 8:32 (KJV)"},
-      {t:"Cry aloud, spare not, lift up thy voice like a trumpet, and shew my people their transgression.", r:"Isaiah 58:1 (KJV)"},
-      {t:"Woe unto them that call evil good, and good evil.", r:"Isaiah 5:20 (KJV)"},
-      {t:"Am I therefore become your enemy, because I tell you the truth?", r:"Galatians 4:16 (KJV)"},
-      {t:"Watch ye, stand fast in the faith, quit you like men, be strong.", r:"1 Corinthians 16:13 (KJV)"}
-    ];
-    const idx = new Date().getDate() % verses.length;
-    document.getElementById('vtext').textContent = '“' + verses[idx].t + '”';
-    document.getElementById('vref').textContent = verses[idx].r;
+<div class="section-title">
+  <h2>Downloads</h2>
+  <div class="count" id="resultCount">0 items</div>
+</div>
+
+<ul id="fileGrid" class="grid" aria-live="polite" aria-busy="false">
+  <!-- ===================== SAMPLE FILES (Replace/duplicate) ===================== -->
+  <!-- Example card; set data-type, data-tags, data-title, data-date (YYYY-MM-DD) -->
+  <li class="card file" data-type="pdf" data-tags="bible, doctrine, afterlife" data-title="The Dead Are Not in Heaven Yet" data-date="2025-08-15">
+    <div class="fileicon" aria-hidden="true">📄</div>
+    <div class="meta">
+      <h3 title="The Dead Are Not in Heaven Yet">The Dead Are Not in Heaven Yet</h3>
+      <div class="sub">
+        <span class="chip">PDF</span>
+        <span class="chip">1.2 MB</span>
+        <span class="chip">2025-08-15</span>
+        <span class="chip">bible</span>
+        <span class="chip">afterlife</span>
+      </div>
+      <div class="actions" style="margin-top:8px;">
+        <a class="link" href="./vault/dead-not-in-heaven.pdf" download>Download</a>
+        <button type="button" data-copy="./vault/dead-not-in-heaven.pdf">Copy link</button>
+      </div>
+    </div>
+  </li>
+
+  <li class="card file" data-type="pdf" data-tags="greek, word study, isaiah" data-title="Pharmakeia — A Word Study (KJV Anchored)" data-date="2025-08-16">
+    <div class="fileicon" aria-hidden="true">📄</div>
+    <div class="meta">
+      <h3 title="Pharmakeia — A Word Study (KJV Anchored)">Pharmakeia — A Word Study (KJV Anchored)</h3>
+      <div class="sub">
+        <span class="chip">PDF</span>
+        <span class="chip">980 KB</span>
+        <span class="chip">2025-08-16</span>
+        <span class="chip">greek</span>
+        <span class="chip">study</span>
+      </div>
+      <div class="actions" style="margin-top:8px;">
+        <a class="link" href="./vault/pharmakeia-word-study.pdf" download>Download</a>
+        <button type="button" data-copy="./vault/pharmakeia-word-study.pdf">Copy link</button>
+      </div>
+    </div>
+  </li>
+
+  <li class="card file" data-type="pdf" data-tags="prophecy, revelation, babylon" data-title="America: Mystery Babylon — Study Guide" data-date="2025-08-10">
+    <div class="fileicon" aria-hidden="true">📄</div>
+    <div class="meta">
+      <h3 title="America: Mystery Babylon — Study Guide">America: Mystery Babylon — Study Guide</h3>
+      <div class="sub">
+        <span class="chip">PDF</span>
+        <span class="chip">2.4 MB</span>
+        <span class="chip">2025-08-10</span>
+        <span class="chip">prophecy</span>
+        <span class="chip">revelation</span>
+      </div>
+      <div class="actions" style="margin-top:8px;">
+        <a class="link" href="./vault/mystery-babylon-study-guide.pdf" download>Download</a>
+        <button type="button" data-copy="./vault/mystery-babylon-study-guide.pdf">Copy link</button>
+      </div>
+    </div>
+  </li>
+
+  <li class="card file" data-type="zip" data-tags="thumbnails, art, assets" data-title="RSTV Thumbnail Pack — 16x9 Templates" data-date="2025-07-28">
+    <div class="fileicon small" aria-hidden="true">🗜️</div>
+    <div class="meta">
+      <h3 title="RSTV Thumbnail Pack — 16x9 Templates">RSTV Thumbnail Pack — 16x9 Templates</h3>
+      <div class="sub">
+        <span class="chip">ZIP</span>
+        <span class="chip">14.8 MB</span>
+        <span class="chip">2025-07-28</span>
+        <span class="chip">assets</span>
+      </div>
+      <div class="actions" style="margin-top:8px;">
+        <a class="link" href="./vault/rstv-thumbnail-pack.zip" download>Download</a>
+        <button type="button" data-copy="./vault/rstv-thumbnail-pack.zip">Copy link</button>
+      </div>
+    </div>
+  </li>
+
+  <li class="card file" data-type="pdf" data-tags="timeline, jesus, calendar" data-title="Jesus Died on a Tree? — Source Packet" data-date="2025-08-15">
+    <div class="fileicon" aria-hidden="true">📄</div>
+    <div class="meta">
+      <h3 title="Jesus Died on a Tree? — Source Packet">Jesus Died on a Tree? — Source Packet</h3>
+      <div class="sub">
+        <span class="chip">PDF</span>
+        <span class="chip">1.7 MB</span>
+        <span class="chip">2025-08-15</span>
+        <span class="chip">timeline</span>
+      </div>
+      <div class="actions" style="margin-top:8px;">
+        <a class="link" href="./vault/jesus-on-a-tree-sources.pdf" download>Download</a>
+        <button type="button" data-copy="./vault/jesus-on-a-tree-sources.pdf">Copy link</button>
+      </div>
+    </div>
+  </li>
+
+  <li class="card file" data-type="other" data-tags="reading plan, kjv" data-title="KJV Year Plan — PDF" data-date="2025-01-01">
+    <div class="fileicon small" aria-hidden="true">📦</div>
+    <div class="meta">
+      <h3 title="KJV Year Plan — PDF">KJV Year Plan — PDF</h3>
+      <div class="sub">
+        <span class="chip">Other</span>
+        <span class="chip">350 KB</span>
+        <span class="chip">2025-01-01</span>
+        <span class="chip">devotional</span>
+      </div>
+      <div class="actions" style="margin-top:8px;">
+        <a class="link" href="./vault/kjv-reading-plan.pdf" download>Download</a>
+        <button type="button" data-copy="./vault/kjv-reading-plan.pdf">Copy link</button>
+      </div>
+    </div>
+  </li>
+  <!-- ===================== /SAMPLE FILES ===================== -->
+</ul>
+
+<div id="emptyState" class="empty" style="display:none;">No files match your search. Try clearing filters or checking your spelling.</div>
+
+<footer>
+  Rock Solid TV • <a href="mailto:rocksolidtv@outlook.com">rocksolidtv@outlook.com</a> • <a href="https://rock-solid-tv.com" target="_blank" rel="noopener">rock-solid-tv.com</a>
+</footer>
+
+  </main>  <script>
+    // ===== Simple Vault logic (search, filter, sort, copy) =====
+    const qs = (s, el=document) => el.querySelector(s);
+    const qsa = (s, el=document) => Array.from(el.querySelectorAll(s));
+
+    const search = qs('#search');
+    const typeFilter = qs('#typeFilter');
+    const sortBy = qs('#sortBy');
+    const clearBtn = qs('#clearBtn');
+    const grid = qs('#fileGrid');
+    const countEl = qs('#resultCount');
+    const emptyState = qs('#emptyState');
+
+    function normalize(s){ return (s || '').toLowerCase().trim(); }
+
+    function getItems(){ return qsa('.file', grid); }
+
+    function applyFilters(){
+      const term = normalize(search.value);
+      const type = typeFilter.value;
+      let items = getItems();
+
+      // filter
+      let visibleCount = 0;
+      items.forEach(li => {
+        const title = normalize(li.dataset.title);
+        const tags = normalize(li.dataset.tags);
+        const matchesText = term === '' || title.includes(term) || tags.includes(term);
+        const matchesType = type === 'all' || (li.dataset.type === type);
+        const show = matchesText && matchesType;
+        li.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      // sort
+      const sorted = items.sort((a,b)=>{
+        const mode = sortBy.value;
+        if (mode === 'alpha'){
+          return a.dataset.title.localeCompare(b.dataset.title);
+        }
+        if (mode === 'newest' || mode === 'oldest'){
+          const da = a.dataset.date || '1970-01-01';
+          const db = b.dataset.date || '1970-01-01';
+          return mode === 'newest' ? (db.localeCompare(da)) : (da.localeCompare(db));
+        }
+        return 0;
+      });
+
+      // re-append for visual order
+      sorted.forEach(el => grid.appendChild(el));
+
+      countEl.textContent = `${visibleCount} item${visibleCount===1?'':'s'}`;
+      emptyState.style.display = visibleCount === 0 ? '' : 'none';
+    }
+
+    // copy buttons
+    grid.addEventListener('click', (e)=>{
+      const btn = e.target.closest('button[data-copy]');
+      if (!btn) return;
+      const url = btn.getAttribute('data-copy');
+      navigator.clipboard.writeText(new URL(url, window.location.href).href)
+        .then(()=>{ btn.textContent = 'Copied!'; setTimeout(()=>btn.textContent='Copy link', 900); })
+        .catch(()=>{ btn.textContent = 'Copy failed'; setTimeout(()=>btn.textContent='Copy link', 900); });
+    });
+
+    // clear
+    clearBtn.addEventListener('click', ()=>{
+      search.value=''; typeFilter.value='all'; sortBy.value='alpha'; applyFilters(); search.focus();
+    });
+
+    // live filter
+    search.addEventListener('input', applyFilters);
+    typeFilter.addEventListener('change', applyFilters);
+    sortBy.addEventListener('change', applyFilters);
+
+    // init
+    applyFilters();
   </script></body>
 </html>
