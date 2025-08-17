@@ -1,83 +1,19 @@
-/* Import conspiracy vibe fonts */
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Oswald:wght@400;700&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Special Elite', monospace;
-  background-color: #0a0a0a;
-  color: #f4f4f4;
-  line-height: 1.6;
-}
-
-header {
-  background: #111;
-  padding: 1rem 2rem;
-  border-bottom: 2px solid #b80000;
-}
-
-header h1 {
-  font-family: 'Oswald', sans-serif;
-  color: #e6c200;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
-nav {
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: #b80000;
-  text-decoration: none;
-  margin-right: 1.5rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #e6c200;
-}
-
-section {
-  padding: 2rem;
-  border-bottom: 1px solid #222;
-}
-
-h2 {
-  font-family: 'Oswald', sans-serif;
-  color: #b80000;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-#vault-list li {
-  list-style: none;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  background: #1a1a1a;
-  border-left: 4px solid #b80000;
-}
-
-#vault-list a {
-  float: right;
-  color: #e6c200;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#vault-list a:hover {
-  color: #b80000;
-}
-
-footer {
-  text-align: center;
-  background: #111;
-  padding: 1rem;
-  border-top: 2px solid #b80000;
-  font-size: 0.9rem;
-}
+:root{--bg:#0b0b0b;--ink:#f3f3f3;--muted:#9a9a9a;--edge:#2a2a2a;--accent:#e10600}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:20px;border-bottom:1px solid var(--edge);text-align:center}
+header h1{margin:0 0 6px;font-size:2rem}
+header p{margin:0 0 12px;color:var(--muted)}
+nav ul{display:flex;gap:.8rem;justify-content:center;padding:0;margin:0;list-style:none}
+nav a{display:inline-block;padding:.45rem .8rem;border:1px solid var(--edge);border-radius:999px;color:var(--ink);text-decoration:none}
+nav a:hover{background:#151515;border-color:#3a3a3a}
+main{max-width:900px;margin:0 auto;padding:24px 16px}
+section{margin:22px 0}
+h2{border-left:4px solid var(--accent);padding-left:.6rem}
+h3{color:var(--muted)}
+a{color:#9cd1ff}
+.vault .muted{color:var(--muted)}
+.vault ul{list-style:none;padding:0}
+.vault li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.6rem .8rem;border:1px solid var(--edge);border-radius:10px;margin:.5rem 0}
+footer{border-top:1px solid var(--edge);margin-top:26px;padding:18px 16px;text-align:center;color:var(--muted)}
+footer a{color:#cde2ff}
