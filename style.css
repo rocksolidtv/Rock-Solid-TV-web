@@ -1,19 +1,86 @@
-:root{--bg:#0b0b0b;--ink:#f3f3f3;--muted:#9a9a9a;--edge:#2a2a2a;--accent:#e10600}
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--ink)}
-header{padding:20px;border-bottom:1px solid var(--edge);text-align:center}
-header h1{margin:0 0 6px;font-size:2rem}
-header p{margin:0 0 12px;color:var(--muted)}
-nav ul{display:flex;gap:.8rem;justify-content:center;padding:0;margin:0;list-style:none}
-nav a{display:inline-block;padding:.45rem .8rem;border:1px solid var(--edge);border-radius:999px;color:var(--ink);text-decoration:none}
-nav a:hover{background:#151515;border-color:#3a3a3a}
-main{max-width:900px;margin:0 auto;padding:24px 16px}
-section{margin:22px 0}
-h2{border-left:4px solid var(--accent);padding-left:.6rem}
-h3{color:var(--muted)}
-a{color:#9cd1ff}
-.vault .muted{color:var(--muted)}
-.vault ul{list-style:none;padding:0}
-.vault li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.6rem .8rem;border:1px solid var(--edge);border-radius:10px;margin:.5rem 0}
-footer{border-top:1px solid var(--edge);margin-top:26px;padding:18px 16px;text-align:center;color:var(--muted)}
-footer a{color:#cde2ff}
+/* Conspiracy theme: black/white/red with cracked earth background */
+:root{ --bg:#0a0a0a; --ink:#f4f4f4; --muted:#bcbcbc; --accent:#b80000; --warn:#e6c200; }
+
+*{ box-sizing:border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Special Elite', monospace;
+  color: var(--ink);
+  background:
+    url('images/cracked-earth-1.jpg') center/cover fixed no-repeat,
+    #0a0a0a;
+}
+
+header {
+  background: rgba(0,0,0,.88);
+  padding: 1rem 2rem;
+  border-bottom: 3px solid var(--accent);
+  text-align: center;
+}
+header h1 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--warn);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+header .tagline { color: var(--accent); margin: .2rem 0 0; font-style: italic; }
+nav { margin-top: .6rem; }
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 1.1rem;
+  font-weight: 700;
+}
+nav a:hover { color: var(--warn); }
+
+section {
+  background: rgba(0,0,0,.72);
+  margin: 1rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #1c1c1c;
+  border-radius: 10px;
+  backdrop-filter: blur(1px);
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  letter-spacing: 1px;
+}
+
+p { margin: .7rem 0; }
+a { color: #cfe6ff; }
+a:hover { color: #fff; }
+
+#vault-list { list-style: none; padding-left: 0; }
+#vault-list li {
+  padding: .6rem .8rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(10,10,10,.75);
+  margin: .5rem 0;
+  border-radius: 8px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+#vault-list .name { font-weight: 700; }
+#vault-list a { color: var(--warn); text-decoration: none; font-weight: 700; }
+#vault-list a:hover { color: var(--accent); }
+
+#verse-of-the-day blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--warn);
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  background: rgba(0,0,0,.88);
+  border-top: 3px solid var(--accent);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+footer a { color: #cde2ff; }
